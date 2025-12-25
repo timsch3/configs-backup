@@ -4,6 +4,7 @@ composer
 curl
 dash
 diffutils
+easyeffects
 efibootmgr
 findutils
 flatpak

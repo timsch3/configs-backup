@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# 1. Track installed software
-echo "Tracking currently installed software in packages.txt and snaps.txt..."
-apt-mark showmanual > packages.txt
-snap list | awk 'NR>1 {print $1}' > snaps.txt
-
-# 2. Get the directory where this script is located
+# 1. Get the directory where this script is located
 # This ensures it works even if you run it from a different folder
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR" || exit
+
+# 2. Track installed software
+echo "Tracking currently installed software in packages.txt and snaps.txt..."
+apt-mark showmanual > packages.txt
+snap list | awk 'NR>1 {print $1}' > snaps.txt
 
 # 3. Define source paths
 ZSH_RC="$HOME/.zshrc"

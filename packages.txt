@@ -54,6 +54,8 @@ mariadb-server
 ncurses-base
 ncurses-bin
 php
+php8.2
+php8.4
 php8.5
 php8.5-bcmath
 php8.5-cli
